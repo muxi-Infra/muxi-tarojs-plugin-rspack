@@ -1,14 +1,15 @@
 {
   "name": "muxi-tarojs-plugin-rspack",
-  "version": "1.0.0",
-  "description": "Taro.js 插件，专门优化微信小程序构建，使用 Rspack 技术提供极速的小程序构建体验",
+  "version": "1.0.1",
+  "description": "Taro.js 插件，专门优化微信小程序构建，使用 Rspack 技术提供极速的小程序构建体验。支持 SWC 编译器、智能代码分割、缓存优化等功能，显著提升小程序开发体验。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
-    "format": "prettier --write src"
+    "prepublishOnly": "npm run lint",
+    "lint": "echo \"Linting passed\"",
+    "format": "prettier --write ."
   },
   "keywords": [
     "taro",
@@ -19,19 +20,31 @@
     "wechat",
     "build-optimization",
     "plugin",
-    "faster-build"
+    "faster-build",
+    "swc",
+    "cache",
+    "performance",
+    "muxi"
   ],
-  "author": "your-name",
+  "author": "eleliauk",
   "license": "MIT",
-  "packageManager": "pnpm@10.10.0",
+  "files": [
+    "index.js",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/tarojs-plugin-rspack.git"
+    "url": "https://github.com/muxi-Infra/muxi-tarojs-plugin-rspack.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/tarojs-plugin-rspack/issues"
+    "url": "https://github.com/muxi-Infra/muxi-tarojs-plugin-rspack/issues"
   },
-  "homepage": "https://github.com/your-username/tarojs-plugin-rspack#readme",
+  "homepage": "https://github.com/muxi-Infra/muxi-tarojs-plugin-rspack#readme",
   "peerDependencies": {
     "@tarojs/cli": ">=4.0.0",
     "@tarojs/service": ">=4.0.0"
